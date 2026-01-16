@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAFIA | Ресторан итальянской и японской кухни в Тирасполе</title>
+    <meta name="description" content="Ресторан MAFIA в Тирасполе - изысканная итальянская и японская кухня, уютная атмосфера, детская комната, банкетный зал. Бронирование: +373 533 78 080">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">
+                <span class="letter">M</span>
+                <span class="letter">A</span>
+                <span class="letter">F</span>
+                <span class="letter">I</span>
+                <span class="letter">A</span>
+            </div>
+            <div class="preloader-text">Загружаем вкус...</div>
+            <div class="preloader-progress">
+                <div class="preloader-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating particles background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+        <div class="cursor-text">Смотреть</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 50 50" class="logo-svg">
+                        <circle cx="25" cy="25" r="23" fill="none" stroke="currentColor" stroke-width="1"/>
+                        <text x="25" y="32" text-anchor="middle" font-family="Playfair Display" font-size="16" font-weight="700" fill="currentColor">M</text>
+                    </svg>
+                </div>
+                <div class="logo-text-wrap">
+                    <span class="logo-text">MAFIA</span>
+                    <span class="logo-subtitle">ristorante & bar</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#hero" class="nav-link active" data-text="Главная">Главная</a></li>
+                <li><a href="#about" class="nav-link" data-text="О нас">О нас</a></li>
+                <li><a href="#menu" class="nav-link" data-text="Меню">Меню</a></li>
+                <li><a href="#gallery" class="nav-link" data-text="Галерея">Галерея</a></li>
+                <li><a href="#features" class="nav-link" data-text="Услуги">Услуги</a></li>
+                <li><a href="#reviews" class="nav-link" data-text="Отзывы">Отзывы</a></li>
+                <li><a href="#contact" class="nav-link" data-text="Контакты">Контакты</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="tel:+37353378080" class="nav-phone magnetic">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+373 533 78 080</span>
+                </a>
+                <a href="#booking" class="btn btn-primary nav-btn magnetic">
+                    <span>Забронировать</span>
+                    <div class="btn-shine"></div>
+                </a>
+            </div>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-noise"></div>
+            <div class="hero-glow"></div>
+        </div>
+
+        <!-- Animated shapes -->
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+
+        <!-- Floating food icons -->
+        <div class="floating-icons">
+            <div class="float-icon" style="--delay: 0s; --x: 10%; --y: 20%;">🍕</div>
+            <div class="float-icon" style="--delay: 1s; --x: 85%; --y: 15%;">🍣</div>
+            <div class="float-icon" style="--delay: 2s; --x: 75%; --y: 70%;">🍝</div>
+            <div class="float-icon" style="--delay: 0.5s; --x: 15%; --y: 75%;">🍷</div>
+            <div class="float-icon" style="--delay: 1.5s; --x: 90%; --y: 45%;">🍰</div>
+            <div class="float-icon" style="--delay: 2.5s; --x: 5%; --y: 50%;">☕</div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-down">
+                <div class="badge-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <span>Тирасполь, Приднестровье</span>
+            </div>
+
+            <h1 class="hero-title">
+                <div class="title-line">
+                    <span class="title-small" data-aos="fade-up" data-aos-delay="100">Добро пожаловать в</span>
+                </div>
+                <div class="title-line">
+                    <span class="title-main glitch" data-text="MAFIA" data-aos="fade-up" data-aos-delay="200">MAFIA</span>
+                </div>
+                <div class="title-line">
+                    <span class="title-tagline" data-aos="fade-up" data-aos-delay="300">
+                        <span class="word">Искусство</span>
+                        <span class="word">вкуса</span>
+                        <span class="word">&</span>
+                        <span class="word">стиля</span>
+                    </span>
+                </div>
+            </h1>
+
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
+                Изысканная <strong>итальянская</strong> и <strong>японская</strong> кухня в самом сердце города.
+                <br>Создаём незабываемые гастрономические впечатления с 2017 года.
+            </p>
+
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="500">
+                <a href="#menu" class="btn btn-primary btn-lg magnetic">
+                    <span class="btn-text">Открыть меню</span>
+                    <span class="btn-icon"><i class="fas fa-utensils"></i></span>
+                    <div class="btn-shine"></div>
+                </a>
+                <a href="#booking" class="btn btn-outline btn-lg magnetic">
+                    <span class="btn-text">Забронировать стол</span>
+                    <span class="btn-icon"><i class="fas fa-calendar-check"></i></span>
+                </a>
+            </div>
+
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-star"></i></div>
+                    <div class="stat-content">
+                        <span class="stat-number" data-count="4.4">0</span>
+                        <span class="stat-label">Рейтинг Google</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-comments"></i></div>
+                    <div class="stat-content">
+                        <span class="stat-number" data-count="600">0</span>
+                        <span class="stat-label">Отзывов</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                    <div class="stat-content">
+                        <span class="stat-number" data-count="7">0</span>
+                        <span class="stat-label">Лет с вами</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <a href="#about" class="scroll-indicator magnetic">
+                <span class="scroll-text">Листайте</span>
+                <div class="scroll-line">
+                    <div class="scroll-dot"></div>
+                </div>
+            </a>
+        </div>
+
+        <div class="hero-social">
+            <a href="https://www.instagram.com/balka_mafia/" target="_blank" class="social-link magnetic" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.google.com/maps/place/Мафия" target="_blank" class="social-link magnetic" aria-label="Google Maps">
+                <i class="fab fa-google"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-images">
+                    <div class="about-img-main tilt-card">
+                        <div class="img-placeholder gradient-1">
+                            <div class="img-content">
+                                <i class="fas fa-utensils"></i>
+                                <span>Уютный интерьер</span>
+                            </div>
+                        </div>
+                        <div class="img-frame"></div>
+                    </div>
+                    <div class="about-img-secondary tilt-card">
+                        <div class="img-placeholder gradient-2">
+                            <div class="img-content">
+                                <i class="fas fa-cocktail"></i>
+                                <span>Бар</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-badge floating">
+                        <div class="badge-content">
+                            <span class="badge-number">7+</span>
+                            <span class="badge-text">лет опыта</span>
+                        </div>
+                    </div>
+                    <div class="about-decor">
+                        <svg viewBox="0 0 200 200">
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="var(--color-primary)" stroke-width="0.5" stroke-dasharray="5,5"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <div class="section-header-left">
+                        <span class="section-tag">О ресторане</span>
+                        <h2 class="section-title">
+                            Место, где рождаются <span class="highlight typed-text"></span>
+                        </h2>
+                    </div>
+
+                    <div class="about-text reveal-text">
+                        <p>
+                            Ресторан <strong>MAFIA</strong> — это уникальное место, где <em>итальянские традиции</em>
+                            встречаются с <em>японским искусством</em> кулинарии.
+                        </p>
+                        <p>
+                            Мы создали пространство, где каждый найдёт что-то особенное: романтический ужин для двоих,
+                            семейный обед с детьми или праздничный банкет с друзьями.
+                        </p>
+                    </div>
+
+                    <div class="about-features">
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="feature-icon pulse">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Свежие продукты</h4>
+                                <p>Только качественные ингредиенты каждый день</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-icon pulse">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Авторские рецепты</h4>
+                                <p>Уникальные блюда от нашего шеф-повара</p>
+                            </div>
+                        </div>
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="feature-icon pulse">
+                                <i class="fas fa-glass-cheers"></i>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Атмосфера праздника</h4>
+                                <p>Идеальное место для любого события</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#menu" class="btn btn-dark magnetic">
+                        <span>Смотреть меню</span>
+                        <i class="fas fa-arrow-right"></i>
+                        <div class="btn-shine"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative elements -->
+        <div class="section-decor">
+            <div class="decor-line"></div>
+        </div>
+    </section>
+
+    <!-- Menu Section - WOW EFFECT -->
+    <section class="menu-section" id="menu">
+        <div class="menu-bg">
+            <div class="menu-pattern"></div>
+            <div class="menu-glow"></div>
+        </div>
+
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag light">Наше меню</span>
+                <h2 class="section-title light">
+                    Гастрономическое <span class="highlight">путешествие</span>
+                </h2>
+                <p class="section-desc">Откройте для себя богатство вкусов двух великих кухонь мира</p>
+            </div>
+
+            <!-- Menu Categories Tabs -->
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-category="all">
+                    <span class="tab-icon">🍽️</span>
+                    <span class="tab-text">Всё меню</span>
+                    <span class="tab-count">24</span>
+                </button>
+                <button class="menu-tab" data-category="pizza">
+                    <span class="tab-icon">🍕</span>
+                    <span class="tab-text">Пицца</span>
+                    <span class="tab-count">6</span>
+                </button>
+                <button class="menu-tab" data-category="sushi">
+                    <span class="tab-icon">🍣</span>
+                    <span class="tab-text">Роллы & Суши</span>
+                    <span class="tab-count">6</span>
+                </button>
+                <button class="menu-tab" data-category="main">
+                    <span class="tab-icon">🥩</span>
+                    <span class="tab-text">Горячее</span>
+                    <span class="tab-count">4</span>
+                </button>
+                <button class="menu-tab" data-category="pasta">
+                    <span class="tab-icon">🍝</span>
+                    <span class="tab-text">Паста</span>
+                    <span class="tab-count">3</span>
+                </button>
+                <button class="menu-tab" data-category="desserts">
+                    <span class="tab-icon">🍰</span>
+                    <span class="tab-text">Десерты</span>
+                    <span class="tab-count">3</span>
+                </button>
+                <button class="menu-tab" data-category="drinks">
+                    <span class="tab-icon">🍹</span>
+                    <span class="tab-text">Напитки</span>
+                    <span class="tab-count">2</span>
+                </button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menu-grid">
+                <!-- PIZZA -->
+                <div class="menu-item" data-category="pizza" data-price="180">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image pizza-quattro-formaggi">
+                                <div class="item-badge hot">Хит</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Пицца 4 сыра</h3>
+                                    <span class="item-price">180 ₽</span>
+                                </div>
+                                <p class="item-desc">Моцарелла, горгонзола, пармезан, дорблю</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 550г</span>
+                                    <span class="meta-item"><i class="fas fa-ruler"></i> 32см</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-cheese"></i> Моцарелла</li>
+                                    <li><i class="fas fa-cheese"></i> Горгонзола</li>
+                                    <li><i class="fas fa-cheese"></i> Пармезан</li>
+                                    <li><i class="fas fa-cheese"></i> Дорблю</li>
+                                    <li><i class="fas fa-apple-alt"></i> Груша</li>
+                                    <li><i class="fas fa-seedling"></i> Грецкий орех</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>320</strong> ккал</span>
+                                    <span><strong>18г</strong> белки</span>
+                                    <span><strong>22г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza" data-price="220">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image pizza-quattro-carne">
+                                <div class="item-badge hot">Хит</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Пицца 4 мяса</h3>
+                                    <span class="item-price">220 ₽</span>
+                                </div>
+                                <p class="item-desc">Пепперони, ветчина, бекон, курица</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 620г</span>
+                                    <span class="meta-item"><i class="fas fa-ruler"></i> 32см</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-bacon"></i> Пепперони</li>
+                                    <li><i class="fas fa-bacon"></i> Ветчина</li>
+                                    <li><i class="fas fa-bacon"></i> Бекон</li>
+                                    <li><i class="fas fa-drumstick-bite"></i> Курица</li>
+                                    <li><i class="fas fa-cheese"></i> Моцарелла</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>420</strong> ккал</span>
+                                    <span><strong>28г</strong> белки</span>
+                                    <span><strong>24г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza" data-price="150">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image pizza-margherita">
+                                <div class="item-badge classic">Классика</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Маргарита</h3>
+                                    <span class="item-price">150 ₽</span>
+                                </div>
+                                <p class="item-desc">Томатный соус, моцарелла, базилик</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 450г</span>
+                                    <span class="meta-item"><i class="fas fa-ruler"></i> 32см</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-circle" style="color: #e74c3c"></i> Томатный соус</li>
+                                    <li><i class="fas fa-cheese"></i> Моцарелла</li>
+                                    <li><i class="fas fa-leaf"></i> Свежий базилик</li>
+                                    <li><i class="fas fa-tint"></i> Оливковое масло</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>250</strong> ккал</span>
+                                    <span><strong>12г</strong> белки</span>
+                                    <span><strong>14г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item featured" data-category="pizza" data-price="450">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image pizza-metro">
+                                <div class="item-badge special">WOW</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Метровая пицца</h3>
+                                    <span class="item-price">450 ₽</span>
+                                </div>
+                                <p class="item-desc">Грандиозная пицца для большой компании!</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 1.8кг</span>
+                                    <span class="meta-item"><i class="fas fa-users"></i> 6-8 чел</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Выберите начинку</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-check-circle"></i> 4 сыра</li>
+                                    <li><i class="fas fa-check-circle"></i> 4 мяса</li>
+                                    <li><i class="fas fa-check-circle"></i> Пепперони</li>
+                                    <li><i class="fas fa-check-circle"></i> Микс</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>Идеально</strong></span>
+                                    <span><strong>для</strong></span>
+                                    <span><strong>компании</strong></span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza" data-price="190">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image pizza-pepperoni">
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Пепперони</h3>
+                                    <span class="item-price">190 ₽</span>
+                                </div>
+                                <p class="item-desc">Пикантная колбаска пепперони, моцарелла</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 520г</span>
+                                    <span class="meta-item"><i class="fas fa-pepper-hot"></i> Острая</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-bacon"></i> Пепперони</li>
+                                    <li><i class="fas fa-cheese"></i> Моцарелла</li>
+                                    <li><i class="fas fa-circle" style="color: #e74c3c"></i> Томатный соус</li>
+                                    <li><i class="fas fa-pepper-hot"></i> Перец чили</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>380</strong> ккал</span>
+                                    <span><strong>20г</strong> белки</span>
+                                    <span><strong>22г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza" data-price="200">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image pizza-khachapuri">
+                                <div class="item-badge new">Новинка</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Хачапури по-аджарски</h3>
+                                    <span class="item-price">200 ₽</span>
+                                </div>
+                                <p class="item-desc">Сулугуни, яйцо, сливочное масло</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 380г</span>
+                                    <span class="meta-item"><i class="fas fa-fire"></i> Горячее</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-cheese"></i> Сыр сулугуни</li>
+                                    <li><i class="fas fa-egg"></i> Яйцо</li>
+                                    <li><i class="fas fa-cube"></i> Сливочное масло</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>450</strong> ккал</span>
+                                    <span><strong>22г</strong> белки</span>
+                                    <span><strong>28г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUSHI / ROLLS -->
+                <div class="menu-item" data-category="sushi" data-price="280">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image roll-philadelphia">
+                                <div class="item-badge hot">Хит</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Филадельфия</h3>
+                                    <span class="item-price">280 ₽</span>
+                                </div>
+                                <p class="item-desc">Лосось, сливочный сыр, огурец, авокадо</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 280г</span>
+                                    <span class="meta-item"><i class="fas fa-circle"></i> 8 шт</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-fish"></i> Лосось</li>
+                                    <li><i class="fas fa-cheese"></i> Сливочный сыр</li>
+                                    <li><i class="fas fa-seedling"></i> Огурец</li>
+                                    <li><i class="fas fa-leaf"></i> Авокадо</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>290</strong> ккал</span>
+                                    <span><strong>16г</strong> белки</span>
+                                    <span><strong>18г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="sushi" data-price="320">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image roll-dragon">
+                                <div class="item-badge premium">Премиум</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Дракон</h3>
+                                    <span class="item-price">320 ₽</span>
+                                </div>
+                                <p class="item-desc">Угорь, авокадо, огурец, соус унаги</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 300г</span>
+                                    <span class="meta-item"><i class="fas fa-circle"></i> 8 шт</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-fish"></i> Угорь</li>
+                                    <li><i class="fas fa-leaf"></i> Авокадо</li>
+                                    <li><i class="fas fa-seedling"></i> Огурец</li>
+                                    <li><i class="fas fa-tint"></i> Соус унаги</li>
+                                    <li><i class="fas fa-seedling"></i> Кунжут</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>310</strong> ккал</span>
+                                    <span><strong>18г</strong> белки</span>
+                                    <span><strong>16г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="sushi" data-price="260">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image roll-hot">
+                                <div class="item-badge hot">Хит</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Горячий ролл</h3>
+                                    <span class="item-price">260 ₽</span>
+                                </div>
+                                <p class="item-desc">В хрустящей темпуре с соусом спайси</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 290г</span>
+                                    <span class="meta-item"><i class="fas fa-fire"></i> Горячий</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-shrimp"></i> Креветка</li>
+                                    <li><i class="fas fa-cheese"></i> Сливочный сыр</li>
+                                    <li><i class="fas fa-bread-slice"></i> Темпура</li>
+                                    <li><i class="fas fa-pepper-hot"></i> Соус спайси</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>340</strong> ккал</span>
+                                    <span><strong>14г</strong> белки</span>
+                                    <span><strong>20г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item featured" data-category="sushi" data-price="650">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image sushi-set">
+                                <div class="item-badge special">Сет</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Сет «Император»</h3>
+                                    <span class="item-price">650 ₽</span>
+                                </div>
+                                <p class="item-desc">32 шт: Филадельфия, Дракон, Калифорния, Спайси</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 980г</span>
+                                    <span class="meta-item"><i class="fas fa-users"></i> 2-3 чел</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>В наборе</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-check"></i> Филадельфия 8 шт</li>
+                                    <li><i class="fas fa-check"></i> Дракон 8 шт</li>
+                                    <li><i class="fas fa-check"></i> Калифорния 8 шт</li>
+                                    <li><i class="fas fa-check"></i> Спайси 8 шт</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>Экономия</strong></span>
+                                    <span><strong>20%</strong></span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="sushi" data-price="230">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image roll-california">
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Калифорния</h3>
+                                    <span class="item-price">230 ₽</span>
+                                </div>
+                                <p class="item-desc">Краб, авокадо, огурец, икра тобико</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 260г</span>
+                                    <span class="meta-item"><i class="fas fa-circle"></i> 8 шт</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-crab"></i> Крабовое мясо</li>
+                                    <li><i class="fas fa-leaf"></i> Авокадо</li>
+                                    <li><i class="fas fa-seedling"></i> Огурец</li>
+                                    <li><i class="fas fa-circle"></i> Икра тобико</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>270</strong> ккал</span>
+                                    <span><strong>14г</strong> белки</span>
+                                    <span><strong>12г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="sushi" data-price="180">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image roll-vegan">
+                                <div class="item-badge vegan">Веган</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Овощной ролл</h3>
+                                    <span class="item-price">180 ₽</span>
+                                </div>
+                                <p class="item-desc">Авокадо, огурец, перец, морковь</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 220г</span>
+                                    <span class="meta-item"><i class="fas fa-leaf"></i> Веган</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-leaf"></i> Авокадо</li>
+                                    <li><i class="fas fa-seedling"></i> Огурец</li>
+                                    <li><i class="fas fa-pepper-hot"></i> Болгарский перец</li>
+                                    <li><i class="fas fa-carrot"></i> Морковь</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>160</strong> ккал</span>
+                                    <span><strong>4г</strong> белки</span>
+                                    <span><strong>8г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MAIN DISHES -->
+                <div class="menu-item" data-category="main" data-price="450">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image steak-ribeye">
+                                <div class="item-badge premium">Премиум</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Стейк Рибай</h3>
+                                    <span class="item-price">450 ₽</span>
+                                </div>
+                                <p class="item-desc">Мраморная говядина, овощи гриль</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 350г</span>
+                                    <span class="meta-item"><i class="fas fa-fire"></i> Medium</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Прожарка</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-circle"></i> Rare (с кровью)</li>
+                                    <li><i class="fas fa-circle"></i> Medium Rare</li>
+                                    <li><i class="fas fa-check-circle"></i> Medium</li>
+                                    <li><i class="fas fa-circle"></i> Well Done</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>520</strong> ккал</span>
+                                    <span><strong>42г</strong> белки</span>
+                                    <span><strong>38г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="main" data-price="280">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image salmon-grill">
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Сёмга на гриле</h3>
+                                    <span class="item-price">280 ₽</span>
+                                </div>
+                                <p class="item-desc">Филе сёмги, спаржа, лимонный соус</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 280г</span>
+                                    <span class="meta-item"><i class="fas fa-heart"></i> ЗОЖ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-fish"></i> Филе сёмги</li>
+                                    <li><i class="fas fa-seedling"></i> Спаржа</li>
+                                    <li><i class="fas fa-lemon"></i> Лимонный соус</li>
+                                    <li><i class="fas fa-leaf"></i> Микс салата</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>320</strong> ккал</span>
+                                    <span><strong>32г</strong> белки</span>
+                                    <span><strong>18г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="main" data-price="320">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image ribs">
+                                <div class="item-badge hot">Хит</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Свиные рёбрышки BBQ</h3>
+                                    <span class="item-price">320 ₽</span>
+                                </div>
+                                <p class="item-desc">Томлёные рёбра в соусе BBQ, картофель</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 450г</span>
+                                    <span class="meta-item"><i class="fas fa-fire"></i> BBQ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-bone"></i> Свиные рёбра</li>
+                                    <li><i class="fas fa-tint"></i> Соус BBQ</li>
+                                    <li><i class="fas fa-apple-alt"></i> Картофель</li>
+                                    <li><i class="fas fa-seedling"></i> Маринованные овощи</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>580</strong> ккал</span>
+                                    <span><strong>38г</strong> белки</span>
+                                    <span><strong>42г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="main" data-price="240">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image chicken-parmesan">
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Курица Пармеджано</h3>
+                                    <span class="item-price">240 ₽</span>
+                                </div>
+                                <p class="item-desc">Куриное филе в панировке с пармезаном</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 320г</span>
+                                    <span class="meta-item"><i class="fas fa-cheese"></i> С сыром</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-drumstick-bite"></i> Куриное филе</li>
+                                    <li><i class="fas fa-cheese"></i> Пармезан</li>
+                                    <li><i class="fas fa-circle" style="color: #e74c3c"></i> Томатный соус</li>
+                                    <li><i class="fas fa-leaf"></i> Базилик</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>380</strong> ккал</span>
+                                    <span><strong>32г</strong> белки</span>
+                                    <span><strong>18г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PASTA -->
+                <div class="menu-item" data-category="pasta" data-price="220">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image pasta-carbonara">
+                                <div class="item-badge hot">Хит</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Карбонара</h3>
+                                    <span class="item-price">220 ₽</span>
+                                </div>
+                                <p class="item-desc">Спагетти, бекон, желток, пармезан</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 350г</span>
+                                    <span class="meta-item"><i class="fas fa-star"></i> Классика</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-utensils"></i> Спагетти</li>
+                                    <li><i class="fas fa-bacon"></i> Гуанчиале</li>
+                                    <li><i class="fas fa-egg"></i> Желток</li>
+                                    <li><i class="fas fa-cheese"></i> Пекорино</li>
+                                    <li><i class="fas fa-pepper-hot"></i> Чёрный перец</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>480</strong> ккал</span>
+                                    <span><strong>18г</strong> белки</span>
+                                    <span><strong>28г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pasta" data-price="250">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image pasta-seafood">
+                                <div class="item-badge premium">Премиум</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Паста с морепродуктами</h3>
+                                    <span class="item-price">250 ₽</span>
+                                </div>
+                                <p class="item-desc">Креветки, мидии, кальмар в сливках</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 380г</span>
+                                    <span class="meta-item"><i class="fas fa-water"></i> Море</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-shrimp"></i> Креветки</li>
+                                    <li><i class="fas fa-shell"></i> Мидии</li>
+                                    <li><i class="fas fa-water"></i> Кальмар</li>
+                                    <li><i class="fas fa-wine-glass"></i> Белое вино</li>
+                                    <li><i class="fas fa-cheese"></i> Сливки</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>420</strong> ккал</span>
+                                    <span><strong>28г</strong> белки</span>
+                                    <span><strong>22г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pasta" data-price="200">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image pasta-bolognese">
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Болоньезе</h3>
+                                    <span class="item-price">200 ₽</span>
+                                </div>
+                                <p class="item-desc">Тальятелле с мясным рагу</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 380г</span>
+                                    <span class="meta-item"><i class="fas fa-star"></i> Классика</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-utensils"></i> Тальятелле</li>
+                                    <li><i class="fas fa-drumstick-bite"></i> Говяжий фарш</li>
+                                    <li><i class="fas fa-circle" style="color: #e74c3c"></i> Томаты</li>
+                                    <li><i class="fas fa-carrot"></i> Овощи</li>
+                                    <li><i class="fas fa-wine-glass"></i> Красное вино</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>450</strong> ккал</span>
+                                    <span><strong>24г</strong> белки</span>
+                                    <span><strong>18г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DESSERTS -->
+                <div class="menu-item" data-category="desserts" data-price="120">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image dessert-tiramisu">
+                                <div class="item-badge hot">Хит</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Тирамису</h3>
+                                    <span class="item-price">120 ₽</span>
+                                </div>
+                                <p class="item-desc">Классический итальянский десерт</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 180г</span>
+                                    <span class="meta-item"><i class="fas fa-coffee"></i> Кофе</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-cheese"></i> Маскарпоне</li>
+                                    <li><i class="fas fa-cookie"></i> Савоярди</li>
+                                    <li><i class="fas fa-coffee"></i> Эспрессо</li>
+                                    <li><i class="fas fa-wine-glass"></i> Марсала</li>
+                                    <li><i class="fas fa-cube"></i> Какао</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>320</strong> ккал</span>
+                                    <span><strong>6г</strong> белки</span>
+                                    <span><strong>22г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts" data-price="140">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image dessert-strudel">
+                                <div class="item-badge new">Рекомендуем</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Яблочный штрудель</h3>
+                                    <span class="item-price">140 ₽</span>
+                                </div>
+                                <p class="item-desc">С шариком ванильного мороженого</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 200г</span>
+                                    <span class="meta-item"><i class="fas fa-fire"></i> Тёплый</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-apple-alt"></i> Яблоки</li>
+                                    <li><i class="fas fa-cookie"></i> Слоёное тесто</li>
+                                    <li><i class="fas fa-seedling"></i> Корица</li>
+                                    <li><i class="fas fa-ice-cream"></i> Мороженое</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>380</strong> ккал</span>
+                                    <span><strong>4г</strong> белки</span>
+                                    <span><strong>18г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts" data-price="130">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image dessert-cheesecake">
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Чизкейк Нью-Йорк</h3>
+                                    <span class="item-price">130 ₽</span>
+                                </div>
+                                <p class="item-desc">С ягодным топпингом</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-weight-hanging"></i> 170г</span>
+                                    <span class="meta-item"><i class="fas fa-heart"></i> Нежный</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-cheese"></i> Крем-сыр</li>
+                                    <li><i class="fas fa-cookie"></i> Песочная основа</li>
+                                    <li><i class="fas fa-circle" style="color: #e74c3c"></i> Ягодный соус</li>
+                                    <li><i class="fas fa-leaf"></i> Мята</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>350</strong> ккал</span>
+                                    <span><strong>8г</strong> белки</span>
+                                    <span><strong>24г</strong> жиры</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DRINKS -->
+                <div class="menu-item" data-category="drinks" data-price="150">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image drink-mojito">
+                                <div class="item-badge hot">Хит</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Мохито</h3>
+                                    <span class="item-price">150 ₽</span>
+                                </div>
+                                <p class="item-desc">Классический освежающий коктейль</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-glass-martini-alt"></i> 300мл</span>
+                                    <span class="meta-item"><i class="fas fa-percentage"></i> 12%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Состав</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-wine-bottle"></i> Белый ром</li>
+                                    <li><i class="fas fa-lemon"></i> Лайм</li>
+                                    <li><i class="fas fa-leaf"></i> Мята</li>
+                                    <li><i class="fas fa-cube"></i> Тростниковый сахар</li>
+                                    <li><i class="fas fa-tint"></i> Содовая</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>Освежает</strong></span>
+                                    <span><strong>Бодрит</strong></span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks" data-price="100">
+                    <div class="menu-item-inner">
+                        <div class="menu-item-front">
+                            <div class="item-image drink-limoncello">
+                                <div class="item-badge special">Фирменное</div>
+                                <div class="item-overlay">
+                                    <span class="view-icon"><i class="fas fa-eye"></i></span>
+                                </div>
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <h3>Лимончелло</h3>
+                                    <span class="item-price">100 ₽</span>
+                                </div>
+                                <p class="item-desc">Домашний ликёр — комплимент от шефа</p>
+                                <div class="item-meta">
+                                    <span class="meta-item"><i class="fas fa-glass-whiskey"></i> 50мл</span>
+                                    <span class="meta-item"><i class="fas fa-gift"></i> Бонус</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item-back">
+                            <div class="back-content">
+                                <h4>Особенности</h4>
+                                <ul class="ingredients">
+                                    <li><i class="fas fa-lemon"></i> Лимонная цедра</li>
+                                    <li><i class="fas fa-wine-bottle"></i> Спирт</li>
+                                    <li><i class="fas fa-cube"></i> Сахарный сироп</li>
+                                    <li><i class="fas fa-snowflake"></i> Подаётся ледяным</li>
+                                </ul>
+                                <div class="nutrition">
+                                    <span><strong>Домашний</strong></span>
+                                    <span><strong>рецепт</strong></span>
+                                </div>
+                                <button class="btn btn-primary btn-sm add-to-cart">
+                                    <i class="fas fa-plus"></i> В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu CTA -->
+            <div class="menu-cta">
+                <p>Хотите увидеть полное меню с ценами?</p>
+                <a href="#contact" class="btn btn-primary btn-lg magnetic">
+                    <span>Связаться с нами</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Галерея</span>
+                <h2 class="section-title">
+                    Атмосфера <span class="highlight">MAFIA</span>
+                </h2>
+                <p class="section-desc">Уютные залы, стильный интерьер и незабываемая атмосфера</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item large" data-cursor="Смотреть">
+                    <div class="gallery-img gradient-main-hall">
+                        <div class="gallery-content">
+                            <i class="fas fa-couch"></i>
+                            <span>Основной зал</span>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Основной зал</h3>
+                        <p>Элегантный интерьер с камином</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-cursor="Смотреть">
+                    <div class="gallery-img gradient-terrace">
+                        <div class="gallery-content">
+                            <i class="fas fa-sun"></i>
+                            <span>Летняя терраса</span>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Летняя терраса</h3>
+                        <p>Отдых на свежем воздухе</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-cursor="Смотреть">
+                    <div class="gallery-img gradient-bar">
+                        <div class="gallery-content">
+                            <i class="fas fa-cocktail"></i>
+                            <span>Бар</span>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Бар</h3>
+                        <p>Коктейли и напитки</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-cursor="Смотреть">
+                    <div class="gallery-img gradient-banquet">
+                        <div class="gallery-content">
+                            <i class="fas fa-glass-cheers"></i>
+                            <span>Банкетный зал</span>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Банкетный зал</h3>
+                        <p>Для торжеств и мероприятий</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item large" data-cursor="Смотреть">
+                    <div class="gallery-img gradient-kids">
+                        <div class="gallery-content">
+                            <i class="fas fa-child"></i>
+                            <span>Детская комната</span>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Детская комната</h3>
+                        <p>Просторная игровая зона с лабиринтом</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="atmosphere-tags">
+                <span class="atm-tag"><i class="fas fa-heart"></i> Романтичное</span>
+                <span class="atm-tag"><i class="fas fa-peace"></i> Спокойное</span>
+                <span class="atm-tag"><i class="fas fa-home"></i> Уютное</span>
+                <span class="atm-tag"><i class="fas fa-smile"></i> Дружелюбное</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="features-bg"></div>
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag light">Наши услуги</span>
+                <h2 class="section-title light">
+                    Всё для вашего <span class="highlight">комфорта</span>
+                </h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card glass">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Семьи с детьми</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Большая детская комната</li>
+                        <li><i class="fas fa-check"></i> Детское меню</li>
+                        <li><i class="fas fa-check"></i> Стульчики для кормления</li>
+                        <li><i class="fas fa-check"></i> Мастер-классы</li>
+                        <li><i class="fas fa-check"></i> Детские дни рождения</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card glass">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Мероприятия</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Банкетный зал</li>
+                        <li><i class="fas fa-check"></i> Корпоративы</li>
+                        <li><i class="fas fa-check"></i> Скидка 20% в ДР</li>
+                        <li><i class="fas fa-check"></i> Торт для именинника</li>
+                        <li><i class="fas fa-check"></i> Свадьбы и юбилеи</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card glass">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Питание</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Завтраки и бранчи</li>
+                        <li><i class="fas fa-check"></i> Бизнес-ланчи</li>
+                        <li><i class="fas fa-check"></i> Еда навынос</li>
+                        <li><i class="fas fa-check"></i> Счастливые часы</li>
+                        <li><i class="fas fa-check"></i> Комплимент от шефа</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card glass">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-wine-glass-alt"></i>
+                    </div>
+                    <h3>Напитки</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Винная карта</li>
+                        <li><i class="fas fa-check"></i> Коктейльная карта</li>
+                        <li><i class="fas fa-check"></i> Пивная карта</li>
+                        <li><i class="fas fa-check"></i> Чайная карта</li>
+                        <li><i class="fas fa-check"></i> Домашний лимончелло</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card glass">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <h3>Доступность</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Вход для колясок</li>
+                        <li><i class="fas fa-check"></i> Места для инвалидов</li>
+                        <li><i class="fas fa-check"></i> Бесплатная парковка</li>
+                        <li><i class="fas fa-check"></i> Wi-Fi</li>
+                        <li><i class="fas fa-check"></i> Кондиционер</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card glass">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Удобная оплата</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Наличные</li>
+                        <li><i class="fas fa-check"></i> Банковские карты</li>
+                        <li><i class="fas fa-check"></i> Бронирование столов</li>
+                        <li><i class="fas fa-check"></i> Банкетное меню</li>
+                        <li><i class="fas fa-check"></i> Предзаказ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Отзывы</span>
+                <h2 class="section-title">
+                    Что говорят <span class="highlight">гости</span>
+                </h2>
+                <div class="reviews-rating">
+                    <div class="rating-display">
+                        <span class="rating-number">4.4</span>
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count">600+ отзывов</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews-carousel">
+                <div class="reviews-track" id="reviews-track">
+                    <div class="review-card">
+                        <div class="review-quote"><i class="fas fa-quote-left"></i></div>
+                        <p class="review-text">"Посетив ресторан "Mafia" остались очень довольны. Прекрасно провели время в чудесной атмосфере с хорошим сервисом и вкусно приготовленной едой. Рекомендуем 10/10!"</p>
+                        <div class="review-author">
+                            <div class="author-avatar">АЦ</div>
+                            <div class="author-info">
+                                <h4>Александр Цуркану</h4>
+                                <span>Местный эксперт</span>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-quote"><i class="fas fa-quote-left"></i></div>
+                        <p class="review-text">"Пришли с детьми, чтобы покушать и поиграть в игровой. Заказали пиццу «4 мяса» - 10/10. Вкусная, сочная, с тоненьким коржом и хрустящим бортиком!"</p>
+                        <div class="review-author">
+                            <div class="author-avatar">АЦ</div>
+                            <div class="author-info">
+                                <h4>Анна Цветаева</h4>
+                                <span>С детьми</span>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-quote"><i class="fas fa-quote-left"></i></div>
+                        <p class="review-text">"Очень хорошее заведение. Не раз отдыхал с семьёй. Хороший сервис, достойная кухня и цены приемлемые. Рекомендую их пиццу и роллы!"</p>
+                        <div class="review-author">
+                            <div class="author-avatar">ОБ</div>
+                            <div class="author-info">
+                                <h4>Олег Бунеев</h4>
+                                <span>Семейный отдых</span>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-quote"><i class="fas fa-quote-left"></i></div>
+                        <p class="review-text">"Было очень вкусно. Это лучший ресторан в Тирасполе. Спасибо! Обязательно придём ещё раз."</p>
+                        <div class="review-author">
+                            <div class="author-avatar">МВ</div>
+                            <div class="author-info">
+                                <h4>Мария Врабие</h4>
+                                <span>Новый гость</span>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-quote"><i class="fas fa-quote-left"></i></div>
+                        <p class="review-text">"Прекрасный ресторан. Отлично провели День рождения дочери. Скидка 20% для именинников и праздничный тортик от заведения!"</p>
+                        <div class="review-author">
+                            <div class="author-avatar">СН</div>
+                            <div class="author-info">
+                                <h4>Сергей Новак</h4>
+                                <span>День рождения</span>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-quote"><i class="fas fa-quote-left"></i></div>
+                        <p class="review-text">"Great pizza, very tasty! Sushi rolls were delicious and super fast delivery. Respectable and kind staff. Will definitely be coming back!"</p>
+                        <div class="review-author">
+                            <div class="author-avatar">PF</div>
+                            <div class="author-info">
+                                <h4>PatyFlowers</h4>
+                                <span>Tourist</span>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-nav">
+                    <button class="review-nav prev" id="reviews-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="review-nav next" id="reviews-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="reviews-cta">
+                <a href="https://www.google.com/maps/place/Мафия" target="_blank" class="btn btn-outline magnetic">
+                    <i class="fab fa-google"></i>
+                    <span>Все отзывы на Google</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section" id="booking">
+        <div class="booking-bg"></div>
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="booking-info">
+                    <span class="section-tag light">Бронирование</span>
+                    <h2 class="section-title light">
+                        Забронируйте <span class="highlight">ваш стол</span>
+                    </h2>
+                    <p class="booking-desc">
+                        Мы рады приветствовать вас в ресторане MAFIA.
+                        Забронируйте стол заранее, чтобы гарантированно насладиться прекрасным вечером.
+                    </p>
+
+                    <div class="booking-perks">
+                        <div class="perk">
+                            <div class="perk-icon"><i class="fas fa-gift"></i></div>
+                            <span>Скидка 20% в день рождения</span>
+                        </div>
+                        <div class="perk">
+                            <div class="perk-icon"><i class="fas fa-birthday-cake"></i></div>
+                            <span>Торт для именинника</span>
+                        </div>
+                        <div class="perk">
+                            <div class="perk-icon"><i class="fas fa-wine-glass-alt"></i></div>
+                            <span>Комплимент от шефа</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-contacts">
+                        <a href="tel:+37353378080" class="contact-card magnetic">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-details">
+                                <span class="contact-label">Позвоните нам</span>
+                                <span class="contact-value">+373 533 78 080</span>
+                            </div>
+                        </a>
+                        <a href="tel:+37353367070" class="contact-card magnetic">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-details">
+                                <span class="contact-label">Дополнительный</span>
+                                <span class="contact-value">+373 533 67 070</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="booking-form-wrapper">
+                    <form class="booking-form" id="booking-form">
+                        <h3>Заявка на бронирование</h3>
+
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Ваше имя</label>
+                            <input type="text" id="name" name="name" placeholder="Как вас зовут?" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone"><i class="fas fa-phone"></i> Телефон</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+373..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests"><i class="fas fa-users"></i> Гостей</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="">Выберите</option>
+                                    <option value="1">1 гость</option>
+                                    <option value="2">2 гостя</option>
+                                    <option value="3-4">3-4 гостя</option>
+                                    <option value="5-6">5-6 гостей</option>
+                                    <option value="7-10">7-10 гостей</option>
+                                    <option value="10+">Более 10</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date"><i class="fas fa-calendar"></i> Дата</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time"><i class="fas fa-clock"></i> Время</label>
+                                <input type="time" id="time" name="time" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="occasion"><i class="fas fa-star"></i> Повод</label>
+                            <select id="occasion" name="occasion">
+                                <option value="">Выберите повод</option>
+                                <option value="birthday">День рождения</option>
+                                <option value="anniversary">Годовщина</option>
+                                <option value="corporate">Корпоратив</option>
+                                <option value="romantic">Романтический ужин</option>
+                                <option value="kids-party">Детский праздник</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment"></i> Пожелания</label>
+                            <textarea id="message" name="message" placeholder="Особые пожелания..." rows="3"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-full magnetic">
+                            <span>Забронировать стол</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+
+                        <p class="form-note">
+                            <i class="fas fa-info-circle"></i>
+                            Мы свяжемся с вами для подтверждения
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Контакты</span>
+                <h2 class="section-title">
+                    Как нас <span class="highlight">найти</span>
+                </h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card-info glass">
+                    <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Адрес</h3>
+                    <p>ул. Юности 14/3<br>Тирасполь 3300</p>
+                    <a href="https://www.google.com/maps/place/Мафия" target="_blank" class="card-link">
+                        Открыть карту <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="contact-card-info glass">
+                    <div class="card-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Часы работы</h3>
+                    <p>Ежедневно<br>10:00 - 23:00</p>
+                    <span class="status-badge open">
+                        <span class="status-dot"></span> Открыто
+                    </span>
+                </div>
+
+                <div class="contact-card-info glass">
+                    <div class="card-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>Телефоны</h3>
+                    <p>
+                        <a href="tel:+37353378080">+373 533 78 080</a><br>
+                        <a href="tel:+37353367070">+373 533 67 070</a>
+                    </p>
+                </div>
+
+                <div class="contact-card-info glass">
+                    <div class="card-icon"><i class="fab fa-instagram"></i></div>
+                    <h3>Соцсети</h3>
+                    <p>Следите за нами</p>
+                    <a href="https://www.instagram.com/balka_mafia/" target="_blank" class="card-link instagram">
+                        @balka_mafia <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="map-wrapper">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Ресторан MAFIA</h3>
+                    <p>ул. Юности 14/3, Тирасполь</p>
+                    <a href="https://www.google.com/maps/place/Мафия" target="_blank" class="btn btn-primary magnetic">
+                        <span>Открыть в Google Maps</span>
+                        <i class="fas fa-directions"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="parking-notice">
+                <div class="parking-icon"><i class="fas fa-parking"></i></div>
+                <div class="parking-info">
+                    <h4>Бесплатная парковка</h4>
+                    <p>Напротив ресторана и на прилегающих улицах</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="#hero" class="footer-logo">
+                            <span class="logo-text">MAFIA</span>
+                            <span class="logo-subtitle">ristorante & bar</span>
+                        </a>
+                        <p>Изысканная итальянская и японская кухня в самом сердце Тирасполя. Создаём незабываемые моменты с 2017 года.</p>
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/balka_mafia/" target="_blank" class="social-btn magnetic">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.google.com/maps/place/Мафия" target="_blank" class="social-btn magnetic">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4>Навигация</h4>
+                        <ul>
+                            <li><a href="#about">О нас</a></li>
+                            <li><a href="#menu">Меню</a></li>
+                            <li><a href="#gallery">Галерея</a></li>
+                            <li><a href="#features">Услуги</a></li>
+                            <li><a href="#reviews">Отзывы</a></li>
+                            <li><a href="#booking">Бронирование</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h4>Услуги</h4>
+                        <ul>
+                            <li><a href="#features">Банкеты</a></li>
+                            <li><a href="#features">Дни рождения</a></li>
+                            <li><a href="#features">Корпоративы</a></li>
+                            <li><a href="#features">Детские праздники</a></li>
+                            <li><a href="#features">Еда навынос</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-contact">
+                        <h4>Контакты</h4>
+                        <ul>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>ул. Юности 14/3, Тирасполь</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:+37353378080">+373 533 78 080</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:+37353367070">+373 533 67 070</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Ежедневно 10:00 - 23:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2017-2026 Ресторан MAFIA. Все права защищены.</p>
+                <p class="footer-tagline">Искусство вкуса в Тирасполе</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Cart Widget -->
+    <div class="cart-widget" id="cart-widget">
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-icon success">
+                <i class="fas fa-check"></i>
+            </div>
+            <h3>Заявка отправлена!</h3>
+            <p>Спасибо за бронирование. Мы свяжемся с вами в ближайшее время.</p>
+            <button class="btn btn-primary modal-close">Отлично!</button>
+        </div>
+    </div>
+
+    <!-- Item Modal -->
+    <div class="modal item-modal" id="item-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content large">
+            <button class="modal-close-btn"><i class="fas fa-times"></i></button>
+            <div class="item-modal-body">
+                <div class="item-modal-image"></div>
+                <div class="item-modal-info">
+                    <h2 class="item-modal-title"></h2>
+                    <p class="item-modal-desc"></p>
+                    <div class="item-modal-price"></div>
+                    <div class="item-modal-ingredients"></div>
+                    <div class="item-modal-actions">
+                        <div class="quantity-control">
+                            <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-modal">
+                            <i class="fas fa-cart-plus"></i>
+                            <span>Добавить</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
